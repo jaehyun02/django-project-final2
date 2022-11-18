@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>게시글 상세보기 </title>
+    </head>
+    <body>
+        <input type="text" class="title" name="title" value="{{board.title}}" readonly/>
+        <div>
+            <textarea class="content" name="content" readonly/>{{ board.content}}</textarea>
+        </div>
+        <div>
+            <a href="/detail/{{board.pk}}/delete"><button>삭제</button></a>
+        </div>
+    </body>
+</html>
