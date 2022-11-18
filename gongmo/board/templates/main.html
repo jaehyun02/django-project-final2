@@ -11,14 +11,12 @@
             <td>번호</td>
             <td>제목</td>
             <td>등록시간</td>
-            <td>수정시간</td>
         </tr>
     {%for item in boardList%}
     <tr>
         <td>{{ item.id}}</td>
         <td><a href="{%url 'board:detail' boardid=item.id%}">{{item.title}}</a></td>
         <td>{{item.createdDate}}</td>
-        <td>{{ item.updatedDate}}</td>
     {% endfor %}
     </table>
     <a href="{%url 'board:write'%}">글 등록하기</a>

@@ -6,7 +6,7 @@ class BoardWriteForm(forms.ModelForm):
         fields=['title','content','user']
         widgets={
             'title':forms.TextInput(attrs={'class':'title'}),
-            'content':forms.TextInput(attrs={'class':'content'}),
+            'content':forms.Textarea(attrs={'class':'content'}),
             'user':forms.HiddenInput()
         }
         

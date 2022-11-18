@@ -5,7 +5,7 @@ from users.models import Member
 @admin.register(Member)
 class Member_admin(admin.ModelAdmin):
     list_display=[
-        'username',
+        'nickname',
         'password',
         'name',
         'age',

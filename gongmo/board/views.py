@@ -8,9 +8,9 @@ from .models import Board
 def main(request):
     boardList= Board.objects.all()
     if request.method == 'POST':
-        username=request.POST.get('username')
+        nickname=request.POST.get('nickname')
         password= request.POST.get('password')
-        user= Member.objects.get(username=username,password=password) 
+        user= Member.objects.get(nickname=nickname,password=password) 
             
         if user is not None:
             request.session['userid']=user.id

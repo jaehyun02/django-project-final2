@@ -5,7 +5,7 @@ from .models import Member
 class MemberForm(forms.ModelForm):
     class Meta:
         model= Member
-        fields=['username','password']
+        fields=['nickname','password']
         widgets={
             'password':forms.PasswordInput
         }
@@ -15,8 +15,8 @@ class SignupForm(forms.ModelForm):
     
     class Meta:
         model = Member
-        fields=['username','password','password_check','name']
+        fields=['nickname','password','password_check','name']
         widgets={
-            'username':forms.TextInput(attrs={'class':'username'}),
+            'nickname':forms.TextInput(attrs={'class':'nickname'}),
             'password':forms.PasswordInput(attrs={'class':'pw1'})
         }
