@@ -8,13 +8,11 @@
     게시판 메인화면에 오신 것을 환영합니다
     <table border="1">
         <tr>
-            <td>번호</td>
             <td>제목</td>
             <td>등록시간</td>
         </tr>
     {%for item in boardList%}
     <tr>
-        <td>{{ item.id}}</td>
         <td><a href="{%url 'board:detail' boardid=item.id%}">{{item.title}}</a></td>
         <td>{{item.createdDate}}</td>
     {% endfor %}
